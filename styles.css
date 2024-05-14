@@ -1,0 +1,97 @@
+:root {
+  --bg-color: hsl(200, 95%, 15%);
+  --text-color: hsl(50, 100%, 85%);
+  --btn-border: 10px solid hsl(0, 0%, 0%);
+  --btn-radius: 20%;
+  --game-over-bg: hsl(0, 100%, 50%);
+  --game-over-opacity: 0.8;
+  --btn-size: 200px;
+}
+
+body {
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 5%;  
+}
+
+.container {
+  display: block;
+  width: 75%;
+}
+
+.btn {
+  margin: 2.5%;
+  display: inline-block;
+  height: var(--btn-size);
+  width: var(--btn-size);
+  border: var(--btn-border);
+  border-radius: var(--btn-radius);
+}
+
+.game-over {
+  background-color: var(--game-over-bg);
+  opacity: var(--game-over-opacity);
+}
+
+.red {
+  background-color: hsl(0, 100%, 50%);
+}
+
+.green {
+  background-color: hsl(120, 100%, 25%);
+}
+
+.blue {
+  background-color: hsl(240, 100%, 50%);
+}
+
+.yellow {
+  background-color: hsl(60, 100%, 50%);
+}
+
+.pressed {
+  box-shadow: 0 0 20px hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 50%);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+  
+  .btn {
+    height: calc(var(--btn-size) * 0.8); 
+    width: calc(var(--btn-size) * 0.8); 
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+  
+  .btn {
+    height: calc(var(--btn-size) * 0.6); 
+    width: calc(var(--btn-size) * 0.6); 
+  }
+}
